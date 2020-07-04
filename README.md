@@ -2,6 +2,7 @@
 
 ## Tested environment
 
+- Laravel 7.0
 - php 7.3
 - MySQL 5.7
 
@@ -16,13 +17,20 @@ $ composer install
 ## Configuration
 
 1. Rename the file `.env.example` to `.env`.
-2. Change configurations in `.env` based on your environment.
-3. Run database migrations and seeds scripts
+2. Generate application key using the artisan command:
 
-```bash
-$ php artisan migrate
-$ php artisan db:seed
-```
+    ```bash
+    $ php artisan key:generate
+    ```
+
+3. Change configurations in `.env` based on your environment.
+4. Set the directories `storage` and `bootstrap/cache` to be writable.
+5. Run database migrations and seeds scripts
+
+    ```bash
+    $ php artisan migrate
+    $ php artisan db:seed
+    ```
 
 ## Testing
 
