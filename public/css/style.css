@@ -1,0 +1,94 @@
+.container  {
+    width: 70%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #145175
+}
+
+.form-area {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.form-message {
+    display: none;
+}
+
+.form-message p {
+    color: rgb(155, 44, 44)
+}
+
+.form-area .form-item {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 1px;
+    background: #f5f5f5;
+    flex-direction: row;
+    align-items: center;
+    width: 330px;
+    padding: 10px;
+}
+
+
+.form-area .form-item.error {
+    background: #ffd3d3;
+}
+
+.form-area .form-item input {
+    padding: 5px;
+}
+
+span.required {
+    color: red;
+}
+
+.form-area .form-item:last-child {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-area .form-item:last-child button {
+    background: #145175;
+    border: 1px solid #145175;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #ffffff
+}
+
+.result-area {
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meal {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    background: #dddddd;
+    border-radius: 5px;
+}
+
+.meals .name {
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.meals .recommenations {
+    color: #145175
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "KFC",
+        "latitude": "30.00123700",
+        "longitude": "31.41266600",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 5,
+        "orders": 100
+    },
+    {
+        "id": 2,
+        "name": "Cookdoor",
+        "latitude": "29.99399400",
+        "longitude": "31.42115800",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 10,
+        "orders": 40
+    },
+    {
+        "id": 3,
+        "name": "Spectra",
+        "latitude": "30.00530200",
+        "longitude": "31.41382000",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 15,
+        "orders": 35
+    },
+    {
+        "id": 4,
+        "name": "Pizza Hut",
+        "latitude": "29.99854700",
+        "longitude": "31.41435600",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 12,
+        "orders": 55
+    },
+    {
+        "id": 5,
+        "name": "Tika",
+        "latitude": "30.00378000",
+        "longitude": "31.43658000",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 17,
+        "orders": 40
+    },
+    {
+        "id": 6,
+        "name": "Om Hassan",
+        "latitude": "29.99630800",
+        "longitude": "31.41086900",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 9,
+        "orders": 60
+    },
+    {
+        "id": 8,
+        "name": "Fish Market",
+        "latitude": "30.00090400",
+        "longitude": "31.41731400",
+        "created_at": "2020-07-03 00:00:00",
+        "updated_at": "2020-07-03 00:00:00",
+        "recommendations": 12,
+        "orders": 10
+    }
+]

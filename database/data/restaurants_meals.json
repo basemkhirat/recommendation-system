@@ -1,0 +1,18 @@
+[
+    { "restaurant_id": 1, "meal_id": 2, "recommendations": 3 },
+    { "restaurant_id": 1, "meal_id": 6, "recommendations": 12 },
+    { "restaurant_id": 1, "meal_id": 8, "recommendations": 9 },
+    { "restaurant_id": 2, "meal_id": 2, "recommendations": 17 },
+    { "restaurant_id": 2, "meal_id": 6, "recommendations": 12 },
+    { "restaurant_id": 2, "meal_id": 8, "recommendations": 25 },
+    { "restaurant_id": 3, "meal_id": 3, "recommendations": 7 },
+    { "restaurant_id": 3, "meal_id": 6, "recommendations": 19 },
+    { "restaurant_id": 4, "meal_id": 5, "recommendations": 29 },
+    { "restaurant_id": 4, "meal_id": 6, "recommendations": 13 },
+    { "restaurant_id": 5, "meal_id": 2, "recommendations": 23 },
+    { "restaurant_id": 5, "meal_id": 6, "recommendations": 6 },
+    { "restaurant_id": 6, "meal_id": 2, "recommendations": 11 },
+    { "restaurant_id": 6, "meal_id": 3, "recommendations": 21 },
+    { "restaurant_id": 6, "meal_id": 6, "recommendations": 1 },
+    { "restaurant_id": 8, "meal_id": 1, "recommendations": 5 }
+]
