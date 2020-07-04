@@ -15,7 +15,7 @@
                     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
                     <div class="form-message">
-                        <p>psdaf adsfasd</p>
+                        <p></p>
                     </div>
 
                     <div class="form-item @if($errors->first("meal_name")) error @endif">

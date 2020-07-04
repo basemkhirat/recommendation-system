@@ -23,9 +23,9 @@ $ composer install
     $ php artisan key:generate
     ```
 
-3. Change configurations in `.env` based on your environment.
+3. Change database configurations in `.env` based on your environment.
 4. Set the directories `storage` and `bootstrap/cache` to be writable.
-5. Run database migrations and seeds scripts
+5. Run database migrations and seeds scripts:
 
     ```bash
     $ php artisan migrate

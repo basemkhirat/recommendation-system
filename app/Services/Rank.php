@@ -8,7 +8,7 @@ class Rank
     public $rows = [];
 
     /**
-     * init
+     * initialize records
      */
     public function __construct($rows)
     {
@@ -32,7 +32,7 @@ class Rank
     }
 
     /**
-     * Sort rows
+     * Sort rows based on rank
      */
     public function sort()
     {
