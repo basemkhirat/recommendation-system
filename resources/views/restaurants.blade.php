@@ -33,7 +33,7 @@
                     <div class="form-item">
                         <a href="javascript:void(0)"  class="location-detector">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                            Detect you location
+                            Detect my location
                         </a>
                         <button type="submit">Find</button>
                     </div>
