@@ -24,6 +24,7 @@ function detectLocation(callback) {
             (position) => callback(true, position.coords),
             () => callback(false, "Please enable browser geolocation"),
             {
+                maximumAge: 0,
                 enableHighAccuracy: true,
                 timeout: 4000,
             }

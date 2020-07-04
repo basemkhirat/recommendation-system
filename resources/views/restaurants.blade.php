@@ -20,7 +20,7 @@
 
                     <div class="form-item @if($errors->first("meal_name")) error @endif">
                         <label for="">Meal <span class="required">*</span></label>
-                        <input type="text" name="meal_name" value="{{ request('meal_name') }}" />
+                        <input type="text" name="meal_name" value="{{ request('meal_name') }}" placeholder="salad" />
                     </div>
                     <div class="form-item @if($errors->first("latitude")) error @endif"">
                         <label for="">Latitude <span class="required">*</span></label>
