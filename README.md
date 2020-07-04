@@ -31,6 +31,11 @@ $ composer install
     $ php artisan migrate
     $ php artisan db:seed
     ```
+6. Start the development server.
+    ```bash
+    $ php artisan serve
+    ```
+
 
 ## Testing
 
