@@ -50,8 +50,6 @@ class RestaurantsController extends Controller
                 });
             }
 
-            //return response()->json($query->get());
-
             $ranked_restaurants = new Rank($query->get()->map(function ($row) {
                 return [
                     "id" => $row->id,
