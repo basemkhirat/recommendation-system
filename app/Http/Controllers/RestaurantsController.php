@@ -45,9 +45,7 @@ class RestaurantsController extends Controller
                 "restaurants.longitude",
                 "restaurants.recommendations",
                 "restaurants_meals.recommendations as meal_recommendations",
-                "meals.name as meal_name",
-                "restaurants.name",
-                "restaurants.name",
+                "meals.name as meal_name"
             );
 
             $query->selectRaw("(3959 * ACOS(COS(RADIANS($latitude))
