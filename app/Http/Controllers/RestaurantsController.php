@@ -50,7 +50,12 @@ class RestaurantsController extends Controller
                 "restaurants.name",
             );
 
-            $query->selectRaw('( 6367 * acos( cos( radians(' . $latitude . ') ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(' . $longitude . ') ) + sin( radians(' . $latitude . ') ) * sin( radians( latitude ) ) ) ) AS distance');
+            $query->selectRaw("(3959 * ACOS(COS(RADIANS($latitude))
+            * COS(RADIANS(latitude))
+            * COS(RADIANS($longitude) - RADIANS(longitude))
+            + SIN(RADIANS($latitude))
+            * SIN(RADIANS(latitude)))) AS distance");
+
             $query->join("restaurants_meals", "restaurants_meals.restaurant_id", "=", "restaurants.id");
             $query->join("meals", "restaurants_meals.meal_id", "=", "meals.id");
             $query->where("meals.name", "like", '%' . $meal_name . '%');
