@@ -38,17 +38,22 @@ class RestaurantsController extends Controller
 
             $query = Restaurant::take(3);
 
-            $query->select(DB::raw('*, ( 6367 * acos( cos( radians(' . $latitude . ') ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(' . $longitude . ') ) + sin( radians(' . $latitude . ') ) * sin( radians( latitude ) ) ) ) AS distance'));
+            $query->select(
+                "restaurants.id",
+                "restaurants.name",
+                "restaurants.latitude",
+                "restaurants.longitude",
+                "restaurants.recommendations",
+                "restaurants_meals.recommendations as meal_recommendations",
+                "meals.name as meal_name",
+                "restaurants.name",
+                "restaurants.name",
+            );
 
-            $query->with(["meals" => function ($query) use ($meal_name) {
-                $query->where("meals.name", "like", '%' . $meal_name . '%');
-            }]);
-
-            if (request()->filled("meal_name")) {
-                $query->whereHas("meals", function ($query) use ($meal_name) {
-                    $query->where("meals.name", "like", '%' . $meal_name . '%');
-                });
-            }
+            $query->selectRaw('( 6367 * acos( cos( radians(' . $latitude . ') ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(' . $longitude . ') ) + sin( radians(' . $latitude . ') ) * sin( radians( latitude ) ) ) ) AS distance');
+            $query->join("restaurants_meals", "restaurants_meals.restaurant_id", "=", "restaurants.id");
+            $query->join("meals", "restaurants_meals.meal_id", "=", "meals.id");
+            $query->where("meals.name", "like", '%' . $meal_name . '%');
 
             $ranked_restaurants = new Rank($query->get()->map(function ($row) {
                 return [
@@ -57,8 +62,8 @@ class RestaurantsController extends Controller
                     "recommendations" => $row->recommendations,
                     "orders" => $row->orders,
                     "distance" => $row->distance,
-                    "meal_name" => $row->meals->first()->name,
-                    "meal_recommendations" => $row->meals->first()->pivot->recommendations
+                    "meal_name" => $row->meal_name,
+                    "meal_recommendations" => $row->meal_recommendations
                 ];
             })->toArray());
 
